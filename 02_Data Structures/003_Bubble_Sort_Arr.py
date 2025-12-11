@@ -2,7 +2,7 @@ import array
 
 """
     In bubble sort we do multiple passes of the whole array by comparing current ele with next ele in
-    each pass. 
+    each pass. Here only adjacent elements are compared.
         Then we check if arr[current] > arr[next] then swap
     Now to limit the no of internal iterations what we do is, we subtract the i from the 1st loop in the range of 
     2nd loop, this helps reducing the nos of internal iterations in each pass as i no of ele are already sorted
