@@ -19,6 +19,9 @@
 
     In the following code we are going to find the n factorial by using recursion
     Note - factorial of ZERO is 1
+
+    we always go in decreasing order, from n upto 0 or 1 i.e. call the func recursively by passing n-1
+    as param
 """
 
 def factorial(n):
