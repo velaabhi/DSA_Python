@@ -61,5 +61,10 @@ def canPlaceFlowers(self, flowerbed: List[int], n: int) -> bool:
         return False
 
 
-print(canPlaceFlowers(flowerbed, n))
+#print(canPlaceFlowers(flowerbed, n))
 
+
+t = (1,2,[20,30])
+print(t)
+t[2] += [40,50]
+print(t)
