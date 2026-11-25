@@ -36,17 +36,18 @@ def minSubArrayLen(target: int, nums: list[int]) -> int:
 
     subarray_len = float('inf')
     left = 0
-    rt = 1
+    rt = 0
     curr_sum = 0
 
     while rt < len(nums):
-        curr_sum = nums[left] + nums[rt]
-        if curr_sum >= target:
-            subarray_len = min(subarray_len, len(nums[left, rt]))
+        curr_sum = curr_sum + nums[rt]
+
+        while curr_sum >= target:
+            subarray_len = min(subarray_len, rt - left + 1)
+            curr_sum = curr_sum - nums[left]
+            left += 1
         rt += 1
 
+    return 0 if subarray_len == float('inf') else subarray_len
 
-    pass
-
-nums = [2,3,1,2,4,3]
 print(minSubArrayLen(target, nums))
